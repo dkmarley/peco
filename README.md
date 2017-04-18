@@ -3,11 +3,16 @@
 A Clojure library for text tokenization, transformation and normalisation. Transformations are specified as a vector of
 operations that are implemented as transducers and performed in the specified order.
 
+## Installation
+
+Add this to your [Leiningen](https://github.com/technomancy/leiningen) `:dependencies`:
+
+[![Clojars Project](http://clojars.org/peco/latest-version.svg)](http://clojars.org/peco)
 
 ## Usage
 
 Available built-in operations are:
-           
+`
 :lower-case            
 :porter-stem           
 :lancaster-stem        
@@ -22,6 +27,7 @@ Available built-in operations are:
 :remove-duplicates     
 :concat-singles        
 :remove-singles
+`
         
 A basic tokenizer is created like this: 
 
