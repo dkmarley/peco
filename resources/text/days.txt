@@ -1,0 +1,15 @@
+mon
+monday
+tue
+tuesday
+wed
+wednesday
+thu
+thur
+thursday
+fri
+friday
+sat
+saturday
+sun
+sunday
