@@ -1,4 +1,4 @@
-(defproject peco "0.1.5"
+(defproject peco "0.1.6"
   :description "A Clojure library for text tokenization"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}

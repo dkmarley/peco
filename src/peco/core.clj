@@ -51,7 +51,7 @@
 
 (defn tokenize
   [text]
-  (re-seq #"\w+" text))
+  (or (re-seq #"\w+" (or text "")) []))
 
 (defn concat-singles
   "Concatenates consecutive single characters. Useful for normalising names etc.
@@ -157,6 +157,3 @@
   ([operations & ud-operations]
    (-> (apply assoc operation-table ud-operations)
        (tokenizer-fn operations))))
-
-
-

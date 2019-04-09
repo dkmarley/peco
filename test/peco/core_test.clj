@@ -20,3 +20,22 @@
         tokens      ["quick" "brown" "fox" "jump" "lazydog" "a.m."]]
     (testing "Tokenizer"
       (is (= (tokenize test-string) tokens)))))
+
+(deftest tokenizer-nil-input
+  (let [tokenize    (p/tokenizer [:lower-case :concat-singles :concat-bigrams :remove-numbers :remove-alpha-numerics
+                                  :remove-days :remove-stop-words :porter-stem]
+                                 :concat-bigrams (p/concat-ngrams 2 #{["lazy" "dogs"]}))
+        test-string nil
+        tokens      []]
+    (testing "Tokenizer"
+      (is (= (tokenize test-string) tokens)))))
+
+(deftest tokenizer-empty-input
+  (let [tokenize    (p/tokenizer [:lower-case :concat-singles :concat-bigrams :remove-numbers :remove-alpha-numerics
+                                  :remove-days :remove-stop-words :porter-stem]
+                                 :concat-bigrams (p/concat-ngrams 2 #{["lazy" "dogs"]}))
+        test-string ""
+        tokens      []]
+    (testing "Tokenizer"
+      (is (= (tokenize test-string) tokens)))))
+
